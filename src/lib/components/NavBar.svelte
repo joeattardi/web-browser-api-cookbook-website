@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm justify-content-end bg-body-tertiary">
+<nav class="navbar navbar-expand-sm justify-content-end bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
     <button
       class="navbar-toggler"
@@ -13,7 +13,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <a class="navbar-brand" href="/">Web Browser API Cookbook</a>
+      <a class="navbar-brand" href="/"><strong>Web Browser API Cookbook</strong></a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/examples">Examples</a>

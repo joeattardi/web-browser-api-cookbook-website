@@ -1,5 +1,6 @@
 <script>
   import Header from '$lib/components/Header.svelte';
+  import '../app.css';
 </script>
 
 <svelte:head>
@@ -7,5 +8,5 @@
 </svelte:head>
 <div>
   <Header />
-  <main><slot></slot></main>
+  <main class="p-4"><slot></slot></main>
 </div>

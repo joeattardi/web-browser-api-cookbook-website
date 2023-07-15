@@ -8,20 +8,34 @@
     console.error('Failed to load user list:', error);
   });
 
-  const list = document.querySelector('#users');
+  const tableBody = document.querySelector('#users tbody');
 
   function renderUser(user) {
-    const item = document.createElement('li');
-    item.textContent = user.name;
-    list.appendChild(item);
+    const row = document.createElement('tr');
+    
+    const firstName = document.createElement('td');
+    firstName.textContent = user.firstName;
+    row.appendChild(firstName);
+
+    const lastName = document.createElement('td');
+    lastName.textContent = user.lastName;
+    row.appendChild(lastName);
+
+    const department = document.createElement('td');
+    department.textContent = user.department;
+    row.appendChild(department);
+
+    tableBody.appendChild(row);
   }
 
   function getUsers() {
     const users = [
-      { name: 'Jean-Luc Picard' },
-      { name: 'William Riker' },
-      { name: 'Data' }
-    ];
+      { firstName: "John", lastName: "Smith", department: "Sales" },
+      { firstName: "Emily", lastName: "Johnson", department: "Marketing" },
+      { firstName: "Michael", lastName: "Davis", department: "Human Resources" },
+      { firstName: "Sarah", lastName: "Thompson", department: "Finance" },
+      { firstName: "David", lastName: "Wilson", department: "Engineering" }
+    ];    
 
     return new Promise(resolve => {
       // Use setTimeout to simluate request latency

@@ -1,5 +1,5 @@
-<h1 class="display-3 fw-bold">Web Browser API Cookbook</h1>
-<h2 class="fs-4">by Joe Attardi</h2>
+<h1 class="display-3 fw-bold text-center">Web Browser API Cookbook</h1>
+<h2 class="fs-4 text-center mb-5">by Joe Attardi</h2>
 
 <p class="fs-5">
   <em>Web Browser API Cookbook</em> will teach you how to leverage the

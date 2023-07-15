@@ -6,7 +6,7 @@
 
 <div class="card h-100">
   <div class="card-body">
-    <small>{chapter}</small>
+    <small class="text-uppercase">{chapter}</small>
     <h5 class="card-title">
       <a href={href} class="link-underline-opacity-0 link-underline stretched-link">{title}</a>
     </h5>

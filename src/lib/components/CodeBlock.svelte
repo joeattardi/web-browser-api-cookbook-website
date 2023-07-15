@@ -14,9 +14,12 @@
   const language = types[filename.split('.')[1]];
 </script>
 
-<Highlight language={language} {code} />
+<div class="code-block">
+  <Highlight language={language} {code} />
+</div>
 
-
-
-
-
+<style>
+  .code-block :global(.hljs) {
+    border-radius: 5px;
+  }
+</style>

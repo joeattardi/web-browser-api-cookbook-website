@@ -3,10 +3,7 @@
   import '../app.css';
 </script>
 
-<svelte:head>
-  <title>Web Browser API Cookbook</title>
-</svelte:head>
 <div>
   <Header />
-  <main class="p-4"><slot></slot></main>
+  <main class="p-4 container"><slot></slot></main>
 </div>

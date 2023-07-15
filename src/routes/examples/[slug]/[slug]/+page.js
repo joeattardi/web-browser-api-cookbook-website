@@ -1,5 +1,3 @@
-import fs from 'fs/promises';
-
 async function getExample(params) {
   const modules = import.meta.glob('/src/examples/**/index.md');
   const exampleModule = Object.entries(modules).find(([path, resolver]) => {
@@ -27,17 +25,6 @@ async function getSourceFiles(params) {
     })));
 
   const sourceFiles = await Promise.all(sourcePromises);
-
-  // const sourceFiles = Object.keys(modules)
-  //   .filter(path => path.includes(params.slug));
-  
-  //   console.log(sourceFiles);
-  // const sourcePromises = Object.entries(modules)
-  //   .filter(([path]) => path.includes(params.slug))
-  //   .map(([path, resolver]) => resolver());
-  
-  //   const sourceFiles = await Promise.all(sourcePromises);
-  //   console.log(sourceFiles);
 
   return sourceFiles;
 }

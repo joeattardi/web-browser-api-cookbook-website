@@ -1,27 +1,27 @@
 <script>
   import { onMount } from 'svelte';
-  import dracula from "svelte-highlight/styles/dracula";
+  import highlightTheme from 'svelte-highlight/styles/night-owl';
 
   import CodeBlock from '../../../../lib/components/CodeBlock.svelte';
 
   export let data;
 
-  const html = data.sourceFiles.find(file => file.path.endsWith('html'));
-  const js = data.sourceFiles.find(file => file.path.endsWith('js'));
+  const html = data.sourceFiles.find((file) => file.path.endsWith('html'));
+  const js = data.sourceFiles.find((file) => file.path.endsWith('js'));
 
   onMount(() => {
-      const scriptTag = document.createElement('script');
-      scriptTag.textContent = `
+    const scriptTag = document.createElement('script');
+    scriptTag.textContent = `
       (function() {
         ${js.content}
       })();
       `;
-      document.body.appendChild(scriptTag);
+    document.body.appendChild(scriptTag);
   });
 </script>
 
 <svelte:head>
-  {@html dracula}
+  {@html highlightTheme}
 </svelte:head>
 
 <h2>{data.metadata.title}</h2>

@@ -13,7 +13,10 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <a class="navbar-brand" href="/"><strong>Web Browser API Cookbook</strong></a>
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <img class="me-2" src="/logo.png" alt="Logo">
+        <strong>Web Browser API Cookbook</strong>
+      </a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/examples">Examples</a>
@@ -22,3 +25,9 @@
     </div>
   </div>
 </nav>
+
+<style>
+  .navbar-brand img {
+    width: 3rem;
+  }
+</style>

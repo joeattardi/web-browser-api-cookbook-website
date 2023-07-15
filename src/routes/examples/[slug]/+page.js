@@ -24,6 +24,8 @@ async function getExamples(params) {
     );
 
   const examples = await Promise.all(examplePromises);
+  console.log(examples);
+  examples.sort((a, b) => a.order - b.order);
   return examples;
 }
 

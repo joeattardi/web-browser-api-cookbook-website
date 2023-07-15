@@ -1,5 +1,9 @@
 <script>
   import { onMount } from 'svelte';
+  import dracula from "svelte-highlight/styles/dracula";
+
+  import CodeBlock from '../../../../lib/components/CodeBlock.svelte';
+
   export let data;
 
   const html = data.sourceFiles.find(file => file.path.endsWith('html'));
@@ -16,6 +20,10 @@
   });
 </script>
 
+<svelte:head>
+  {@html dracula}
+</svelte:head>
+
 <h2>{data.metadata.title}</h2>
 
 <svelte:component this={data.component} />
@@ -26,7 +34,5 @@
 
 {#each data.sourceFiles as { path, content }}
   <h3>{path}</h3>
-  <pre>
-{content}
-  </pre>
+  <CodeBlock filename={path} code={content} />
 {/each}

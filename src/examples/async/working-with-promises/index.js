@@ -1,9 +1,3 @@
-
-
-
-// window.addEventListener('DOMContentLoaded', () => {
-  console.log('whatsup')
-
   getUsers()
   // This function is called when the user list has been loaded.
   .then(userList => {

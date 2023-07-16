@@ -13,3 +13,13 @@
     <p><slot></slot></p>
   </div>
 </div>
+
+<style>
+  .card {
+    background: #f8fafc;
+  }
+
+  .card:hover {
+    background: #f1f5f9;
+  }
+</style>

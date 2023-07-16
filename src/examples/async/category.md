@@ -1,8 +1,8 @@
 ---
-title: Async APIs
+title: Asynchronous APIs
 chapter: 1
 slug: async
-summary: Fundamental patterns of asynchronous JavaScript
+summary: Explore fundamental asynchronous JavaScript concepts, including callback functions and Promises.
 ---
 
-Async APIs are awesome
+Many browser APIs are asynchronous in nature. This chapter contains recipes for performing basic tasks asynchronously using callback functions, events, and Promises.

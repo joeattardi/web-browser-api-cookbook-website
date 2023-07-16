@@ -28,10 +28,12 @@
 
 <svelte:component this={data.component} />
 
-<div>
+<h3>Demo</h3>
+<div class="card p-4 my-4">
   {@html html.content}
 </div>
 
+<h3>Code</h3>
 {#each data.sourceFiles as { path, content }}
   <h3>{path}</h3>
   <CodeBlock filename={path} code={content} />

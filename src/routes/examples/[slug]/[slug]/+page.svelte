@@ -36,12 +36,21 @@
 
 <svelte:component this={data.component} />
 
+{#if html}
 <h3>Demo</h3>
 <div class="card p-4 my-4">
   {@html html}
 </div>
+{/if}
 
-<h3>Code</h3>
+{#if html || js}
+  <h3>Code</h3>
 
-<CodeBlock type="javascript" code={js} />
-<CodeBlock type="html" code={html} />
+  {#if js}
+    <CodeBlock type="javascript" code={js} />
+  {/if}
+
+  {#if html}
+    <CodeBlock type="html" code={html} />
+  {/if}
+{/if}

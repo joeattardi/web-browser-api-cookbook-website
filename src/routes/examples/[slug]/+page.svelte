@@ -18,8 +18,9 @@
 
 <h3>Examples</h3>
 
-<div class="grid mt-4">
+<div class="row row-cols-1 row-cols-md-2 mt-4 g-2">
   {#each data.examples as { slug, title, summary, order }}
+    <div class="col">
       <CategoryCard
         {title}
         href={`/examples/${slug}`}
@@ -27,6 +28,7 @@
       >
         {summary}
       </CategoryCard>
+    </div>
   {/each}
 </div>
 

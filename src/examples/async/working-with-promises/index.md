@@ -1,6 +1,7 @@
 ---
 title: Working With Promises
 order: 1
+chapter: async
 slug: async/working-with-promises
 summary: Load some data using a Promise-based API.
 ---

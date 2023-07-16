@@ -1,10 +1,17 @@
 <script>
+  import Breadcrumb from '../../../lib/components/Breadcrumb.svelte';
+  import Breadcrumbs from '../../../lib/components/Breadcrumbs.svelte';
   import CategoryCard from '../../../lib/components/CategoryCard.svelte';
 
   export let data;
 </script>
 
-<small>Chapter {data.metadata.chapter}</small>
+<Breadcrumbs>
+  <Breadcrumb href="/examples">Examples</Breadcrumb>
+  <Breadcrumb active>{data.metadata.title}</Breadcrumb>
+</Breadcrumbs>
+
+<small class="text-uppercase">Chapter {data.metadata.chapter}</small>
 <h1>{data.metadata.title}</h1>
 
 <svelte:component this={data.component} />

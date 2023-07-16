@@ -2,6 +2,8 @@
   import { onMount } from 'svelte';
   import highlightTheme from 'svelte-highlight/styles/night-owl';
 
+  import Breadcrumb from '../../../../lib/components/Breadcrumb.svelte';
+  import Breadcrumbs from '../../../../lib/components/Breadcrumbs.svelte';
   import CodeBlock from '../../../../lib/components/CodeBlock.svelte';
 
   export let data;
@@ -23,7 +25,14 @@
   {@html highlightTheme}
 </svelte:head>
 
-<h2>{data.metadata.title}</h2>
+<Breadcrumbs>
+  <Breadcrumb href="/examples">Examples</Breadcrumb>
+  <Breadcrumb href="/examples/{data.chapter.metadata.slug}">{data.chapter.metadata.title}</Breadcrumb>
+  <Breadcrumb active>{data.metadata.title}</Breadcrumb>
+</Breadcrumbs>
+
+<small class="text-uppercase">Recipe {data.chapter.metadata.chapter}.{data.metadata.order}</small>
+<h1>{data.metadata.title}</h1>
 
 <svelte:component this={data.component} />
 

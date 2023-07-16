@@ -1,7 +1,12 @@
 import { getExampleData } from '../../../../lib/getExampleData.js';
 
 async function getExample(params) {
-  return await getExampleData(`${params.slug}/index.md`);
+  return getExampleData(`${params.slug}/index.md`);
+}
+
+async function getChapter(chapter) {
+  console.log(chapter);
+  return getExampleData(`${chapter}/category.md`);
 }
 
 async function getSourceFiles(params) {
@@ -23,10 +28,12 @@ async function getSourceFiles(params) {
 
 export async function load({ params }) {
   const example = await getExample(params);
+  const chapter = await getChapter(example.metadata.chapter);
   const sourceFiles = await getSourceFiles(params);
 
   return {
     ...example,
+    chapter,
     sourceFiles
   };
 }

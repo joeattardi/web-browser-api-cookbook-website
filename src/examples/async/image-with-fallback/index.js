@@ -32,17 +32,19 @@ const invalidImage = 'https://example.com/invalid.jpg';
 
 loadImage(validImage).then(image => {
   image.className = 'm-auto';
-  document.querySelector('#validImage .result').appendChild(image);
+  document.querySelector('#validImage .card-img-top').appendChild(image);
 });
 
 loadImage(invalidImage, validImage).then(image => {
   image.className = 'm-auto';
-  document.querySelector('#invalidImageFallback .result').appendChild(image);
+  document.querySelector('#invalidImageFallback .card-img-top').appendChild(image);
 });
 
 loadImage(invalidImage).then(image => {
   image.className = 'm-auto';
-  document.querySelector('#invalidImage .result').appendChild(image);
+  document.querySelector('#invalidImage .card-img-top').appendChild(image);
 }).catch(error => {
-  document.querySelector('#invalidImage .result').innerHTML = '⚠️ error loading image';
+  const errorImage = new Image();
+  errorImage.src = invalidImage;
+  document.querySelector('#invalidImage .card-img-top').appendChild(errorImage);
 });

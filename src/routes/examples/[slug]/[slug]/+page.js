@@ -5,7 +5,6 @@ async function getExample(params) {
 }
 
 async function getChapter(chapter) {
-  console.log(chapter);
   return getExampleData(`${chapter}/category.md`);
 }
 

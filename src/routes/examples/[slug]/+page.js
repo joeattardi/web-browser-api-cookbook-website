@@ -1,32 +1,20 @@
-async function getCategory(params) {
-  const modules = import.meta.glob('/src/examples/**/category.md');
-  const exampleModule = Object.entries(modules).find(([path, resolver]) => {
-    return path.endsWith(`${params.slug}/category.md`);
-  });
+import { getExampleData } from '../../../lib/getExampleData.js';
 
-  if (exampleModule) {
-    const [path, resolver] = exampleModule;
-    const { default: component, metadata } = await resolver();
-
-    return {
-      component,
-      metadata
-    };
-  }
+function getCategory(params) {
+  return getExampleData(`${params.slug}/category.md`);
 }
 
 async function getExamples(params) {
   const modules = import.meta.glob('/src/examples/**/index.md');
-  const examplePromises = Object.entries(modules)
-    .filter(([path]) => path.includes(params.slug))
+
+  // Find all examples whose paths have the category slug
+  const examples = await Promise.all(Object.entries(modules)
+    .filter(([path]) => path.startsWith(`/src/examples/${params.slug}`))
     .map(([path, resolver]) =>
       resolver().then(post => post.metadata)
-    );
+    ));
 
-  const examples = await Promise.all(examplePromises);
-  console.log(examples);
-  examples.sort((a, b) => a.order - b.order);
-  return examples;
+  return examples.sort((a, b) => a.order - b.order);
 }
 
 export async function load({ params }) {

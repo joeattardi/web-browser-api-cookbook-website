@@ -6,14 +6,13 @@
 
   export let data;
 
-  const html = data.sourceFiles.find((file) => file.path.endsWith('html'));
-  const js = data.sourceFiles.find((file) => file.path.endsWith('js'));
+  const { html, js } = data.sourceFiles;
 
   onMount(() => {
     const scriptTag = document.createElement('script');
     scriptTag.textContent = `
       (function() {
-        ${js.content}
+        ${js}
       })();
       `;
     document.body.appendChild(scriptTag);
@@ -30,11 +29,15 @@
 
 <h3>Demo</h3>
 <div class="card p-4 my-4">
-  {@html html.content}
+  {@html html}
 </div>
 
 <h3>Code</h3>
-{#each data.sourceFiles as { path, content }}
+
+<CodeBlock type="javascript" code={js} />
+<CodeBlock type="html" code={html} />
+
+<!-- {#each data.sourceFiles as { path, content }}
   <h3>{path}</h3>
   <CodeBlock filename={path} code={content} />
-{/each}
+{/each} -->

@@ -4,3 +4,7 @@
 :root {
   --bs-font-sans-serif: 'Lato', sans-serif;
 }
+
+body {
+  background: #f8fafc;
+}

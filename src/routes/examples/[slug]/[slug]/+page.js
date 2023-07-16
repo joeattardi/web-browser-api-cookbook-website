@@ -1,18 +1,7 @@
+import { getExampleData } from '../../../../lib/getExampleData.js';
+
 async function getExample(params) {
-  const modules = import.meta.glob('/src/examples/**/index.md');
-  const exampleModule = Object.entries(modules).find(([path, resolver]) => {
-    return path.endsWith(`${params.slug}/index.md`);
-  });
-
-  if (exampleModule) {
-    const [path, resolver] = exampleModule;
-    const { default: component, metadata } = await resolver();
-
-    return {
-      component,
-      metadata
-    };
-  }
+  return await getExampleData(`${params.slug}/index.md`);
 }
 
 async function getSourceFiles(params) {
@@ -25,8 +14,11 @@ async function getSourceFiles(params) {
     })));
 
   const sourceFiles = await Promise.all(sourcePromises);
-
-  return sourceFiles;
+  
+  return sourceFiles.reduce((result, current) => ({
+    ...result,
+    [current.path.split('.')[1]]: current.content
+  }), {});
 }
 
 export async function load({ params }) {

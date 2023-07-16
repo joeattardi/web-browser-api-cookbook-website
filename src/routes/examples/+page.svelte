@@ -9,7 +9,7 @@
 </svelte:head>
 <h1>Examples by Chapter</h1>
 <div class="grid mt-4">
-  {#each data.examples as { slug, title, summary, chapter }}
+  {#each data.chapters as { slug, title, summary, chapter }}
     <CategoryCard {title} href={`/examples/${slug}`} chapter={`Chapter ${chapter}`}>
       {summary}
     </CategoryCard>

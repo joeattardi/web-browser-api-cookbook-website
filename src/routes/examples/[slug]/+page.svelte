@@ -11,9 +11,8 @@
 
 <h3>Examples</h3>
 
-<div class="row rol-cols-1 row-cols-md-2 g-4">
+<div class="grid mt-4">
   {#each data.examples as { slug, title, summary, order }}
-    <div class="col">
       <CategoryCard
         {title}
         href={`/examples/${slug}`}
@@ -21,6 +20,14 @@
       >
         {summary}
       </CategoryCard>
-    </div>
   {/each}
 </div>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(0, 1fr);
+    gap: 1rem;
+  }
+</style>

@@ -36,8 +36,3 @@
 
 <CodeBlock type="javascript" code={js} />
 <CodeBlock type="html" code={html} />
-
-<!-- {#each data.sourceFiles as { path, content }}
-  <h3>{path}</h3>
-  <CodeBlock filename={path} code={content} />
-{/each} -->

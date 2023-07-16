@@ -16,10 +16,10 @@
 
 <style>
   .card {
-    background: #f8fafc;
+    background: #ffffff;
   }
 
   .card:hover {
-    background: #f1f5f9;
+    background: #eff6ff;
   }
 </style>

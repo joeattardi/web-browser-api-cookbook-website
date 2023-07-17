@@ -15,6 +15,10 @@
   will appear at the top of the example's JavaScript code.
 </p>
 
+<p>
+  When running the demos, check the browser console for additional logging output.
+</p>
+
 <div class="grid mt-4">
   {#each data.chapters as { slug, title, summary, chapter }}
     <CategoryCard {title} href={`/examples/${slug}`} chapter={`Chapter ${chapter}`}>

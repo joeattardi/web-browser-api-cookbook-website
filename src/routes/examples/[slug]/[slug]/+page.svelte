@@ -39,7 +39,9 @@
 {#if html}
 <h3>Demo</h3>
 <div class="card p-4 my-4">
-  {@html html}
+  <div class="card-body">
+    {@html html}
+  </div>
 </div>
 {/if}
 

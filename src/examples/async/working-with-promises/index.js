@@ -6,6 +6,10 @@ getUsers()
     console.error('Failed to load user list:', error);
   });
 
+/**
+ * Renders an array of users in the user table.
+ * @param userList the array of users
+ */
 function renderUsers(userList) {
   const tableBody = document.querySelector('#users tbody');
   userList.forEach(user => {

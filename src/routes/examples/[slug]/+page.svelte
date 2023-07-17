@@ -31,12 +31,3 @@
     </div>
   {/each}
 </div>
-
-<style>
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: minmax(0, 1fr);
-    gap: 1rem;
-  }
-</style>

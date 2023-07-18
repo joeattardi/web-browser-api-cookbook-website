@@ -1,0 +1,17 @@
+
+<div id="result" class="alert alert-primary d-none" role="alert">
+  <h4>New URL</h4>
+  <code id="result-url"></code>
+</div>
+<form id="url-form">
+  <div class="mb-3">
+    <label for="url" class="form-label">URL</label>
+    <input type="url" class="form-control" id="url" value="https://example.com/api/users?status=active&role=admin">
+  </div>
+  <div><label for="param" class="form-label">Parameter to remove</label></div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" value="status" id="param">
+    <button class="btn btn-outline-secondary" type="button" id="remove-single">Remove Single Parameter</button>
+  </div>
+  <button class="btn btn-danger" id="remove-all" type="button">Remove All Parameters</button>
+</form>

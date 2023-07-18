@@ -1,0 +1,15 @@
+<div id="result" class="alert alert-primary d-none" role="alert">
+  <h4>Full URL</h4>
+  <code id="result-url"></code>
+</div>
+<form id="url-form">
+  <div class="mb-3">
+    <label for="relativePath" class="form-label">Relative Path</label>
+    <input required value="/api/users" type="text" id="relativePath" name="relativePath" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="baseUrl" class="form-label">Base URL</label>
+    <input required type="url" value="https://example.com" id="baseUrl" name="baseUrl" class="form-control">
+  </div>
+  <button class="btn btn-primary">Get Full URL</button>
+</form>

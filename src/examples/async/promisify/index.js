@@ -79,3 +79,4 @@ loadJSON('/api/users')
   
     tableBody.appendChild(row);
   }
+  

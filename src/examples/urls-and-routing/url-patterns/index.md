@@ -5,6 +5,12 @@ chapter: urls-and-routing
 slug: urls-and-routing/url-patterns
 summary: "Match URLs against predefined patterns."
 ---
+<script>
+  import CompatibilityWarning from '$lib/components/CompatibilityWarning.svelte';
+</script>
+
+<CompatibilityWarning name="URLPattern API" href="https://caniuse.com/mdn-api_urlpattern">
+</CompatibilityWarning>
 
 This demo shows how to match patterns in URLs using the [URLPattern API](https://developer.mozilla.org/en-US/docs/Web/API/URLPattern). 
 For each pattern input, you can enter an exact string to match or include wildcards and named groups.

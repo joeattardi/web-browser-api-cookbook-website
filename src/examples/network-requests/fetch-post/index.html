@@ -1,0 +1,27 @@
+<h3>Create User</h3>
+<form id="user-form">
+  <div class="mb-3">
+    <label for="firstName" class="form-label">First name</label>
+    <input type="text" class="form-control" id="firstName" name="firstName" required>
+  </div>
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="lastName" name="lastName" required>
+  </div>
+  <div class="mb-3">
+    <label for="department" class="form-label">Department</label>
+    <select class="form-select" id="department" name="department">
+      <option>Sales</option>
+      <option>Marketing</option>
+      <option>Human Resources</option>
+      <option>Finance</option>
+      <option>Engineering</option>
+    </select>
+  </div>
+  <button class="btn btn-primary">Create User</button>
+</form>
+
+<div id="response" class="mt-3 d-none">
+  <h4>Response</h4>
+  <pre class="bg-success-subtle p-2"></pre>
+</div>

@@ -1,0 +1,40 @@
+<!-- Template to render a URL that doesn't match -->
+<template id="result-template-noMatch">
+  <div class="alert alert-danger mt-4">
+    <h4 class="url mb-2"></h4>
+    <div class="my-2">URL does not match pattern</div>
+  </div>
+</template>
+
+<!-- Template to render a matching URL -->
+<template id="result-template-match">
+  <div class="alert alert-success mt-4">
+    <h4 class="url text-2xl mb-2"></h4>
+    <div class="my-2">URL matches pattern</div>
+    <div class="my-2 fw-bold">Match details:</div>
+    <ul class="details">
+    </ul>
+  </div>
+</template>
+
+
+<form>
+  <fieldset class="mb-3">
+    <legend>URL patterns</legend>
+    <div class="mb-3">
+      <label class="form-label" for="url">Host name</label>
+      <input class="form-control" id="hostname" type="text" name="hostname">
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="url">Path name</label>
+      <input class="form-control" id="pathname" type="text" name="pathname" value="/api/users/:userId">
+    </div>
+  </fieldset>
+  <div class="mb-3">
+    <label class="form-label" for="url">URL to match</label>
+    <input class="form-control" id="url" type="url" required name="url" value="https://example.com/api/users/sysadmin">
+  </div>
+  <button class="btn btn-primary">Check URL</button>
+</form>
+
+<div id="results"></div>

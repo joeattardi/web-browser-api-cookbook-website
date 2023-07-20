@@ -14,7 +14,6 @@ async function getExamples(params) {
       resolver().then(post => post.metadata)
     ));
 
-    console.log(examples);
   return examples
     .filter(example => !example.hidden)
     .sort((a, b) => a.order - b.order);

@@ -1,3 +1,7 @@
+const currentUser = {
+  username: 'sysadmin'
+};
+
 // Some analytics data we want to capture
 const data = {
   user: currentUser.username,

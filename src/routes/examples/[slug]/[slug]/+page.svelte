@@ -11,13 +11,15 @@
   const { html, js } = data.sourceFiles;
 
   onMount(() => {
-    const scriptTag = document.createElement('script');
-    scriptTag.textContent = `
-      (function() {
-        ${js}
-      })();
-      `;
-    document.body.appendChild(scriptTag);
+    if (js && html) {
+      const scriptTag = document.createElement('script');
+      scriptTag.textContent = `
+        (function() {
+          ${js}
+        })();
+        `;
+      document.body.appendChild(scriptTag);
+    }
   });
 </script>
 

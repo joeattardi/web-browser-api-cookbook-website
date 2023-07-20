@@ -1,6 +1,6 @@
 ---
 title: Sending a Beacon
-order: 4
+order: 5
 chapter: network-requests
 slug: network-requests/beacon
 summary: Send a quick POST request containing analytics or other data as the user is leaving your page.

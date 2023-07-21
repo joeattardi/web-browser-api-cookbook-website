@@ -9,7 +9,7 @@ let contactsDb;
  * @param onSuccess A callback function that is executed when the database is ready
  */
 function openDatabase(onSuccess) {
-  const request = indexedDB.open('todos-index');
+  const request = indexedDB.open('contacts-crud');
 
   // Create the object store if needed
   request.addEventListener('upgradeneeded', () => {
@@ -33,7 +33,7 @@ function openDatabase(onSuccess) {
 }
 
 /**
- * Reads the contacts from the database, and renders them in the table.
+ * Reads the contacts from the database.
  * @param onSuccess A callback function that is executed when the contacts are loaded
  */
 function getContacts(onSuccess) {

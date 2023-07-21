@@ -10,7 +10,6 @@
     } else {
       isDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
     }
-    console.log(isDark);
     document.documentElement.dataset.bsTheme = isDark ? 'dark' : 'light';
   }
 

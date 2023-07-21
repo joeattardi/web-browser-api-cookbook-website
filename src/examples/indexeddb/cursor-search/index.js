@@ -35,6 +35,10 @@ function searchEmployees(name, onSuccess) {
       onSuccess(results);
     }
   });
+
+  request.addEventListener('error', () => {
+    console.error('Error searching employees:', request.error);
+  });
 }
 
 /**
@@ -77,6 +81,10 @@ function openDatabase(onSuccess) {
       // Otherwise, call the onSuccess callback
       onSuccess(db);
     }
+  });
+
+  request.addEventListener('error', () => {
+    console.error('Error opening database:', request.error);
   });
 }
 

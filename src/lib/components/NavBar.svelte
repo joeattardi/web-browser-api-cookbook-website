@@ -1,3 +1,7 @@
+<script>
+  import DarkModeToggle from './DarkModeToggle.svelte';
+</script>
+
 <nav class="navbar navbar-expand-sm justify-content-end bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
     <button
@@ -19,9 +23,13 @@
       </a>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/examples">Examples</a>
+          <a class="nav-link" href="/examples">Examples</a>
         </li>
       </ul>
+    </div>
+    <div class="d-flex">
+      <a class="nav-link link-light" href="https://github.com/joeattardi/web-browser-api-cookbook"><i class="bi bi-github"></i></a>
+      <DarkModeToggle />
     </div>
   </div>
 </nav>

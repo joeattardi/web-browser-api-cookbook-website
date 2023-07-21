@@ -15,11 +15,11 @@
 </div>
 
 <style>
-  .card {
+  /* .card {
     background: #ffffff;
   }
 
   .card:hover {
     background: #eff6ff;
-  }
+  } */
 </style>

@@ -1,5 +1,5 @@
 ---
-title: Creating a Contact Database
+title: Creating, Reading, and Deleting Objects in a Database
 order: 1
 chapter: indexeddb
 slug: indexeddb/basic-crud

@@ -26,6 +26,10 @@ function openDatabase(onSuccess) {
     // Call the given callback with the database.
     onSuccess(db);
   });
+
+  request.addEventListener('error', () => {
+    console.error('Error opening database:', request.error);
+  });
 }
 
 /**
@@ -41,6 +45,10 @@ function getContacts(onSuccess) {
   request.addEventListener('success', () => {
     console.log('Got contacts:', request.result);
     onSuccess(request.result);
+  });
+
+  request.addEventListener('error', () => {
+    console.error('Error loading contacts:', request.error);
   });
 }
 
@@ -59,6 +67,10 @@ function addContact(contact, onSuccess) {
     console.log('Added new contact:', contact);
     onSuccess();
   });
+
+  request.addEventListener('error', () => {
+    console.error('Error adding contact:', request.error);
+  });
 }
 
 /**
@@ -75,7 +87,11 @@ function deleteContact(contact, onSuccess) {
   request.addEventListener('success', () => {
     console.log('Deleted contact:', contact);
     onSuccess();
-  })
+  });
+
+  request.addEventListener('error', () => {
+    console.error('Error deleting contact:', request.error);
+  });
 }
 
 // Open the database and do the initial contact list render.
@@ -111,7 +127,7 @@ function renderContacts() {
         // Name cell
         const name = document.createElement('td');
         name.className = 'align-middle';
-        name.innerHTML =  contact.name;
+        name.textContent = contact.name;
         row.appendChild(name);
 
         // Email cell

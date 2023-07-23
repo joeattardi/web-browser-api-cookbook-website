@@ -1,5 +1,6 @@
 <script>
   import Header from '$lib/components/Header.svelte';
+  import Footer from '../lib/components/Footer.svelte';
   import '../app.css';
 </script>
 
@@ -24,7 +25,14 @@
     }
   </script>
 </svelte:head>
-<div>
+<div class="layout d-flex flex-column">
   <Header />
-  <main class="p-4 container"><slot></slot></main>
+  <main class="p-4 container flex-grow-1"><slot></slot></main>
+  <Footer />
 </div>
+
+<style>
+  .layout {
+    height: 100vh;
+  }
+</style>

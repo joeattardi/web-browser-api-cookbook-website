@@ -25,10 +25,13 @@
         <li class="nav-item">
           <a class="nav-link" href="/examples">Examples</a>
         </li>
+        <li>
+          <a class="nav-link" href="/about">About</a>
+        </li>
       </ul>
     </div>
     <div class="d-flex">
-      <a class="nav-link link-light" href="https://github.com/joeattardi/web-browser-api-cookbook"><i class="bi bi-github"></i></a>
+      <a class="nav-link link-light fs-4" href="https://github.com/joeattardi/web-browser-api-cookbook"><i class="bi bi-github"></i></a>
       <DarkModeToggle />
     </div>
   </div>

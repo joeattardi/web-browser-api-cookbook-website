@@ -1,3 +1,10 @@
+/**
+ * Creates a new user by sending a POST request to /api/users.
+ * @param firstName The user's first name
+ * @param lastName The user's last name
+ * @param department The user's department
+ * @returns a Promise that resolves to the API response body
+ */
 function createUser(firstName, lastName, department) {
   return fetch('/api/users', {
     method: 'POST',

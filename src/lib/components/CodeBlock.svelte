@@ -1,6 +1,6 @@
 <script>
   import Highlight from 'svelte-highlight';
-  import html from 'svelte-highlight/languages/vbscript-html';
+  import html from 'svelte-highlight/languages/xml';
   import javascript from 'svelte-highlight/languages/javascript';
 
   export let code;

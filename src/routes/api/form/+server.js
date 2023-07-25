@@ -1,12 +1,24 @@
 import { json } from '@sveltejs/kit';
 
-export async function POST({ request }) {
+async function getFromJson(request) {
+  const json = await request.json();
+  return json;
+}
+
+async function getFromFormData(request) {
   const body = await request.formData();
 
-  const receivedData = {};
+  const json = {};
   for (const [key, value] of body.entries()) {
-    receivedData[key] = value;
+    json[key] = value;
   }
-  
+  return json;
+}
+
+export async function POST({ request }) {
+  const receivedData = await (request.headers.get('content-type') === 'application/json' ?
+    getFromJson(request) :
+    getFromFormData(request));
+
   return json(receivedData);
 }

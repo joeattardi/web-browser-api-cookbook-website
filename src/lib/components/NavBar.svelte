@@ -2,7 +2,7 @@
   import DarkModeToggle from './DarkModeToggle.svelte';
 </script>
 
-<nav class="navbar navbar-expand-sm justify-content-end bg-body-tertiary" data-bs-theme="dark">
+<nav class="navbar navbar-expand-md justify-content-end bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
     <button
       class="navbar-toggler"
@@ -28,10 +28,13 @@
         <li>
           <a class="nav-link" href="/about">About</a>
         </li>
+        <li>
+          <a class="nav-link" href="https://learning.oreilly.com/library/view/web-browser-api/9781098150686/">Get the Book</a>
+        </li>
       </ul>
     </div>
     <div class="d-flex">
-      <a class="nav-link link-light fs-4" href="https://github.com/joeattardi/web-browser-api-cookbook"><i class="bi bi-github"></i></a>
+      <a class="nav-link link-light fs-4 me-3" href="https://github.com/joeattardi/web-browser-api-cookbook"><i class="bi bi-github"></i></a>
       <DarkModeToggle />
     </div>
   </div>

@@ -1,4 +1,12 @@
-const form = document.querySelector('#user-form');
+const form = document.querySelector('#options-form');
+
+function validateCheckboxes(form) {
+  const data = new FormData(form);
+
+  if (data.getAll('options').length === 0) {
+    form.elements.option1.setCustomValidity('Please select at least one option.');
+  }
+}
 
 /**
  * Adds the necessary event listeners to an element to participate in form validation.
@@ -13,7 +21,6 @@ function addValidation(element) {
    * Sets the error message and style, and also sets the shouldValidate flag.
    */
   element.addEventListener('invalid', () => {  
-    element.classList.add('border-danger');
     errorElement.textContent = element.validationMessage;
     element.dataset.shouldValidate = true;
   });
@@ -22,10 +29,9 @@ function addValidation(element) {
    * Fired when user input occurs in the field. If the shouldValidate flag is set,
    * it will re-check the field's validity and clear the error message if it becomes valid.
    */
-  element.addEventListener('input', () => {
+  element.addEventListener('change', () => {
     if (element.dataset.shouldValidate) {
       if (element.checkValidity()) {
-        element.classList.remove('border-danger');
         errorElement.textContent = '';
       }
     }
@@ -41,10 +47,12 @@ function addValidation(element) {
   });
 }
 
-addValidation(form.elements.username);
-addValidation(form.elements.email);
+addValidation(form.elements.option1);
+addValidation(form.elements.option2);
+addValidation(form.elements.option3);
 
 form.addEventListener('submit', event => {
   event.preventDefault();
+  validateCheckboxes(form);
   console.log(form.checkValidity());
-});
+})

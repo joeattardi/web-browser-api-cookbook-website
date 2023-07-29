@@ -1,4 +1,29 @@
-const form = document.querySelector('#user-form');
+const form = document.querySelector('#signup-form');
+
+/**
+ * Custom validation function that ensures the password and confirmPassword fields have the same value.
+ * @param form the form containing the two fields
+ */
+function validatePasswordsMatch(form) {
+  const { password, confirmPassword } = form.elements;
+
+  if (password.value !== confirmPassword.value) {
+    // A non-empty string marks the field as invalid
+    confirmPassword.setCustomValidity('Passwords do not match.');
+  } else {
+    // An empty string marks the field as valid
+    confirmPassword.setCustomValidity('');
+  }
+}
+
+/**
+ * Updates the custom validation on input events.
+ */
+form.elements.confirmPassword.addEventListener('input', () => {
+  if (form.elements.confirmPassword.dataset.shouldValidate) {
+    validatePasswordsMatch(form);
+  }
+});
 
 /**
  * Adds the necessary event listeners to an element to participate in form validation.
@@ -42,9 +67,11 @@ function addValidation(element) {
 }
 
 addValidation(form.elements.username);
-addValidation(form.elements.email);
+addValidation(form.elements.password);
+addValidation(form.elements.confirmPassword);
 
 form.addEventListener('submit', event => {
   event.preventDefault();
+  validatePasswordsMatch(form);
   console.log(form.checkValidity());
 });

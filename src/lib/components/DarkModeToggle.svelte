@@ -22,7 +22,7 @@
 
 <button
   style={isDark == null ? 'opacity: 0;' : 'opacity: 1'}
-  class="fs-4 ms-4 nav-link link-light"
+  class="fs-4 nav-link link-light"
   on:click={toggleTheme}
 >
     <i class="bi {isDark ? 'bi-moon-stars-fill' : 'bi-sun-fill'}" />

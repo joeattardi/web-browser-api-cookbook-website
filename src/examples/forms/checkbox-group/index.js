@@ -3,8 +3,15 @@ const form = document.querySelector('#options-form');
 function validateCheckboxes(form) {
   const data = new FormData(form);
 
+  // To avoid setting the validation error on multiple elements,
+  // choose the first checkbox and use that to hold the group's validation
+  // message.
+  const element = form.elements.option1;
+
   if (data.getAll('options').length === 0) {
-    form.elements.option1.setCustomValidity('Please select at least one option.');
+    element.setCustomValidity('Please select at least one option.');
+  } else {
+    element.setCustomValidity('');
   }
 }
 
@@ -14,36 +21,25 @@ function validateCheckboxes(form) {
  * @param element The input element to validate
  */
 function addValidation(element) {
-  const errorElement = document.getElementById(`${element.id}-error`);
+  const errorElement = document.getElementById('checkbox-error');
 
   /**
    * Fired when the form is validated and the field is not valid.
-   * Sets the error message and style, and also sets the shouldValidate flag.
+   * Sets the error message and style.
    */
-  element.addEventListener('invalid', () => {  
+  element.addEventListener('invalid', () => {
     errorElement.textContent = element.validationMessage;
-    element.dataset.shouldValidate = true;
   });
 
   /**
-   * Fired when user input occurs in the field. If the shouldValidate flag is set,
-   * it will re-check the field's validity and clear the error message if it becomes valid.
+   * Fired when user input occurs in the field.
+   * It will re-check the field's validity and clear the error message if it becomes valid.
    */
   element.addEventListener('change', () => {
-    if (element.dataset.shouldValidate) {
-      if (element.checkValidity()) {
-        errorElement.textContent = '';
-      }
+    validateCheckboxes(form);
+    if (form.elements.option1.checkValidity()) {
+      errorElement.textContent = '';
     }
-  });
-
-  /**
-   * Fired when the field loses focus, applying the shouldValidate flag.
-   */
-  element.addEventListener('blur', () => {
-    // This field has been touched, it will now be validated on subsequent
-    // `input` events.
-    element.dataset.shouldValidate = true;
   });
 }
 
@@ -55,4 +51,4 @@ form.addEventListener('submit', event => {
   event.preventDefault();
   validateCheckboxes(form);
   console.log(form.checkValidity());
-})
+});

@@ -1,3 +1,8 @@
+/**
+ * Loads the post titles for a given user ID.
+ * @param userId the ID of the user whose posts you want to load
+ * @returns a Promise that resolves to an array of post titles
+ */
 function getPostTitles(userId) {
   console.log('Getting user');
   return getUser(userId)

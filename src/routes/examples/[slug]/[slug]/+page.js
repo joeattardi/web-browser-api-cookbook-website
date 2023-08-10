@@ -1,7 +1,7 @@
 import { getExampleData } from '../../../../lib/getExampleData.js';
 
 async function getExample(params) {
-  return getExampleData(`${params.slug}/index.md`);
+  return getExampleData(`/${params.slug}/index.md`);
 }
 
 async function getChapter(chapter) {

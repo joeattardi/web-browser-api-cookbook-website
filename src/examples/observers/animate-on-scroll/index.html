@@ -1,0 +1,56 @@
+<style>
+  .container {
+    height: 20rem;
+    overflow: auto;
+  }
+
+  .cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  img.animate {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 500ms;
+  }
+
+  img.animate.appear {
+    opacity: 1;
+    transform: scale(1);
+  }
+</style>
+
+<div class="container">
+  <h1>Cat Pictures</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec neque scelerisque, ultrices metus ac,
+    scelerisque quam. Aliquam quis erat condimentum, vestibulum arcu ut, viverra libero. Quisque turpis orci, mattis
+    aliquet nulla non, consequat congue lorem. Quisque vitae scelerisque velit. Sed mollis sit amet eros sit amet
+    accumsan. Aenean lobortis egestas magna at commodo. Nullam purus orci, cursus at metus id, consequat gravida leo.
+    Donec rhoncus eget velit id egestas. Vivamus nec ipsum sit amet nulla luctus hendrerit quis et dolor. Vivamus
+    imperdiet luctus turpis et placerat. Maecenas hendrerit gravida mi, vitae suscipit nisi sodales eu. Fusce ac pretium
+    turpis, nec ultrices mauris. In sem sapien, dictum quis elit vitae, euismod tristique ante. Donec interdum
+    ullamcorper justo vel tempus
+  </p>
+
+  <p>
+    Vestibulum a ultricies elit, eu porttitor libero. Phasellus elementum suscipit nibh et ornare. Cras vulputate
+    rhoncus dolor, vitae ullamcorper eros aliquet nec. Maecenas sollicitudin sed eros id tempor. Duis rutrum ac nibh id
+    mollis. Fusce dapibus libero sapien, in posuere velit molestie ac. Praesent placerat tristique dictum. Sed sagittis
+    magna nec nunc eleifend iaculis. Quisque interdum tincidunt euismod. In molestie ligula id felis tincidunt, et
+    dapibus nisi auctor.
+  </p>
+
+  <h2>Scroll down to see the cats!</h2>
+
+  <div class="cats">
+    <img class="animate" src="https://placekitten.com/400/200" />
+    <img class="animate" src="https://placekitten.com/410/200" />
+    <img class="animate" src="https://placekitten.com/420/200" />
+    <img class="animate" src="https://placekitten.com/430/200" />
+    <img class="animate" src="https://placekitten.com/440/200" />
+    <img class="animate" src="https://placekitten.com/405/200" />
+  </div>
+</div>

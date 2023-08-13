@@ -1,14 +1,18 @@
 import { json } from '@sveltejs/kit';
-
-const users = [
-  { firstName: "John", lastName: "Smith", department: "Sales" },
-  { firstName: "Emily", lastName: "Johnson", department: "Marketing" },
-  { firstName: "Michael", lastName: "Davis", department: "Human Resources" },
-  { firstName: "Sarah", lastName: "Thompson", department: "Finance" },
-  { firstName: "David", lastName: "Wilson", department: "Engineering" }
-];   
+import { faker } from '@faker-js/faker';
 
 export function GET() {
+  const users = [];
+
+  for (let i = 0; i < 10; i++) {
+    users.push({ 
+      firstName: faker.person.firstName(), 
+      lastName: faker.person.lastName(), 
+      department: faker.commerce.department(),
+      jobTitle: faker.person.jobTitle()
+    });
+  }
+
   return new Response(JSON.stringify(users));
 }
 

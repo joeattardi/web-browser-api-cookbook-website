@@ -19,6 +19,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@faker-js/faker": "^8.0.2",
 		"mdsvex": "^0.11.0"
 	}
 }

@@ -1,6 +1,6 @@
 ---
 title: Submitting a Form as JSON
-order: 2
+order: 3
 chapter: forms
 slug: forms/form-json
 summary: Use the FormData API to transform form data into JSON.

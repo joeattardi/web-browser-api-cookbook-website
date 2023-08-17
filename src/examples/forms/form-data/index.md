@@ -1,6 +1,6 @@
 ---
 title: Submitting a Form with Fetch and the FormData API
-order: 1
+order: 2
 chapter: forms
 slug: forms/form-data
 summary: Use the Fetch API to submit a form, adding extra data with the FormData API.

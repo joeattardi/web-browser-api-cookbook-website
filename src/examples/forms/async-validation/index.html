@@ -1,0 +1,14 @@
+<form id="signup-form" novalidate>
+  <div class="mb-3">
+    <label class="form-label" for="username">Username</label>
+    <input required type="text" id="username" name="username" class="form-control">
+    <div class="error-message text-danger" id="username-error"></div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="password">Password</label>
+    <div><small>Passwords must be at least 8 characters and must contain at least one number</small></div>
+    <input required type="password" id="password" name="password" class="form-control">
+    <div class="error-message text-danger" id="password-error"></div>
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>

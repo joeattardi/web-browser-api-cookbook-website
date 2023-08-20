@@ -6,7 +6,7 @@ const animation = box.animate([
   { transform: 'rotate(360deg)' }
 ], { duration: 5000, iterations: Infinity });
 
-trigger.addEventListener('click', () => {
+function toggleAnimation(animation) {
   if (animation.playState === 'running') {
     animation.pause();
     trigger.textContent = 'Animate';
@@ -14,4 +14,8 @@ trigger.addEventListener('click', () => {
     animation.play();
     trigger.textContent = 'Pause';
   }
+}
+
+trigger.addEventListener('click', () => {
+  toggleAnimation(animation);
 });

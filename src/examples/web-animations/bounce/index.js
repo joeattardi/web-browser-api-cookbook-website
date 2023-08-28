@@ -2,7 +2,7 @@ const button = document.querySelector('#bounce-trigger');
 const ball = document.querySelector('#bounce');
 
 // The distance the element moves is smaller each time.
-const distances = [ '50%', '25%', '10%' ];
+const distances = [ '40px', '20px', '10px' ];
 
 async function animateBounce() {
   for (let distance of distances) {

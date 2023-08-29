@@ -1,6 +1,6 @@
-const images = document.querySelectorAll('.images img');
+const items = document.querySelectorAll('.images div');
 
-const animationOptions = { duration: 500, fill: 'both' };
+const animationOptions = { duration: 200, easing: 'ease-in-out', fill: 'both' };
 
 let currentIndex = 0;
 
@@ -8,24 +8,30 @@ function getTransform(offset) {
   return { transform: `translateX(${offset * 300}px)` };
 }
 
-document.querySelector('.next-image').addEventListener('click', () => {
-    images[currentIndex].animate([
-      getTransform(-currentIndex),
-      getTransform(-(currentIndex + 1))
-    ], animationOptions);
+function animateOut(element, direction) {
+  element.animate([
+    getTransform(-currentIndex),
+    getTransform(-(currentIndex + direction))
+  ], animationOptions);
+}
 
-    if (currentIndex < images.length - 1) {
-      images[currentIndex + 1].animate([
-        getTransform(-currentIndex),
-        getTransform(-(currentIndex + 1))
-      ], animationOptions);
-      currentIndex++;
-    }
-    else {
-      currentIndex = 0;
-      images[0].animate([
-        getTransform(1),
-        getTransform(0)
-      ], { duration: 500, fill: 'both' });
-    }
+function animateIn(element, direction) {
+  element.animate([
+    getTransform(-currentIndex + direction),
+    getTransform(-currentIndex)
+  ], animationOptions);
+}
+
+document.querySelector('.next-image').addEventListener('click', () => {
+  animateOut(items[currentIndex], 1);
+  currentIndex = currentIndex < items.length - 1 ?
+    currentIndex + 1 : 0;
+  animateIn(items[currentIndex], 1);
+});
+
+document.querySelector('.previous-image').addEventListener('click', () => {
+  animateOut(items[currentIndex], -1);
+  currentIndex = currentIndex > 0 ?
+    currentIndex - 1 : items.length - 1;
+  animateIn(items[currentIndex], -1);
 });

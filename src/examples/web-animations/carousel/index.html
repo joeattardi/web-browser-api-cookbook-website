@@ -7,15 +7,25 @@
     overflow: hidden;
     width: 300px;
   }
+
+  .tile {
+    width: 300px;
+    height: 200px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+  }
 </style>
 
 <div class="d-flex mx-auto carousel align-items-center">
-  <button class="btn me-2"><i class="fs-1 bi bi-chevron-left"></i></button>
+  <button class="btn me-2 previous-image"><i class="fs-1 bi bi-chevron-left"></i></button>
   <div class="images d-flex mx-auto">
-    <img src="https://source.unsplash.com/300x200">
-    <img src="https://source.unsplash.com/300x201">
-    <img src="https://source.unsplash.com/300x202">
-    <img src="https://source.unsplash.com/300x203">
+    <div class="tile text-light bg-primary">1</div>
+    <div class="tile text-light bg-success">2</div>
+    <div class="tile text-light bg-warning">3</div>
+    <div class="tile text-light bg-info">4</div>
   </div>
   <button class="btn ms-2 next-image"><i class="fs-1 bi bi-chevron-right"></i></button>
 </div>

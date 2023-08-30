@@ -1,6 +1,6 @@
 ---
 title: Respecting the User's Animation Preference
-order: 7
+order: 8
 chapter: web-animations
 slug: web-animations/reduced-motion
 summary: Simplify or disable animations when the user has requested reduced motion.

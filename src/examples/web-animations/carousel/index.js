@@ -5,7 +5,7 @@ const animationOptions = { duration: 200, easing: 'ease-in-out', fill: 'both' };
 let currentIndex = 0;
 
 function getTransform(offset) {
-  return { transform: `translateX(${offset * 300}px)` };
+  return { transform: `translateX(${offset * 100}%)` };
 }
 
 function animateOut(element, direction) {

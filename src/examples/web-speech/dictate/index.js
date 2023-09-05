@@ -23,6 +23,10 @@ function startDictation(textField) {
       textField.value += result[0].transcript;
     });
 
+    recognition.addEventListener('error', event => {
+      console.log('error', event);
+    });
+
     recognition.start();
 
     // Return the recognition object so recognition

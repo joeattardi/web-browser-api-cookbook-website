@@ -25,6 +25,7 @@
 
 <svelte:head>
   {@html highlightTheme}
+  <title>{data.metadata.title} | Web Browser API Cookbook</title>
 </svelte:head>
 
 <Breadcrumbs>

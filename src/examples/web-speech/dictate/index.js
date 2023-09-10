@@ -13,13 +13,13 @@ let recognition;
  * @returns The recognition object
  */
 function startDictation(textField) {
-  if ('webkitSpeechRecognition' in window) {
-    const recognition = new webkitSpeechRecognition();
+  if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
     recognition.continuous = true;
 
     recognition.addEventListener('result', event => {
       const result = event.results[event.resultIndex];
-      console.log(result);
       textField.value += result[0].transcript;
     });
 
@@ -36,7 +36,7 @@ function startDictation(textField) {
 }
 
 // Make sure the browser supports speech recognition.
-if (!('webkitSpeechRecognition' in window)) {
+if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
   document.querySelector('.compatibility').classList.remove('d-none');
   document.querySelector('.demo').classList.add('d-none');
 }

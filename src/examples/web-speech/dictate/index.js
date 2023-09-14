@@ -17,9 +17,11 @@ function startDictation(textField) {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     recognition.continuous = true;
+    recognition.maxAlternatives = 50;
 
     recognition.addEventListener('result', event => {
       const result = event.results[event.resultIndex];
+      console.log(result);
       textField.value += result[0].transcript;
     });
 

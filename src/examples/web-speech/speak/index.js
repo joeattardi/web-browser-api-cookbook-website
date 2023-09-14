@@ -13,7 +13,7 @@ function populateVoiceOptions() {
     voices = speechSynthesis.getVoices();
     voices.forEach((voice, index) => {
       const option = new Option(voice.name, index);
-      if (voice.default) {
+      if (voice.name === 'Samantha') {
         option.selected = true;
       }
       voiceSelect.appendChild(option);

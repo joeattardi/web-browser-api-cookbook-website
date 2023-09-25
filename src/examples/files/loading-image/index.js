@@ -11,7 +11,7 @@ fileInput.addEventListener('change', event => {
 
   reader.addEventListener('error', event => {
     console.log('error', event);
-  })
+  });
 
   reader.readAsDataURL(file);
 });

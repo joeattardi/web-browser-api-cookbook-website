@@ -1,5 +1,5 @@
 ---
-title: Checking File Permissions
+title: Checking and Requesting Permissions
 order: 5
 chapter: files
 slug: files/checking-permissions

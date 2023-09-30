@@ -1,0 +1,25 @@
+<div class="alert alert-success d-none" id="export-success" role="alert">
+  The user data was exported.
+</div>
+<button class="btn btn-primary d-none" id="export-button">
+  <i class="bi bi-box-arrow-down"></i> Export
+</button>
+<table id="users" class="table">
+  <thead>
+    <tr>
+      <th class="w-25">First name</th>
+      <th class="w-25">Last name</th>
+      <th class="w-25">Department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="loader">
+      <td colspan="3" class="text-center p-4">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div>Loading Users</div>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,6 +1,6 @@
 ---
 title: Using Custom Validation Logic
-order: 6
+order: 8
 chapter: forms
 slug: forms/custom-validation
 summary: Use the setCustomValidity function to apply a custom validation message.

@@ -39,7 +39,7 @@
 
 <svelte:component this={data.component} />
 
-{#if html}
+{#if html && js}
 <h3>Demo</h3>
 <div class="card p-4 my-4">
   <div class="card-body">

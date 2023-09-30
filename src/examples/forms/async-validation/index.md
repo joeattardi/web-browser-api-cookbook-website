@@ -1,6 +1,6 @@
 ---
 title: Validating a Field Asynchronously
-order: 7
+order: 10
 chapter: forms
 slug: forms/async-validation
 summary: Perform asynchronous validation with a network request.

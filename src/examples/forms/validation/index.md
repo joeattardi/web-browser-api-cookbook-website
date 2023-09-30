@@ -1,6 +1,6 @@
 ---
 title: Validating Forms
-order: 4
+order: 7
 chapter: forms
 slug: forms/validation
 summary: Use the Constraint Validation API to check the validity of form fields.

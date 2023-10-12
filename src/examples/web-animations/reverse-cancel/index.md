@@ -1,5 +1,5 @@
 ---
-title: Reversing and Canceling Animations
+title: Reversing Animations
 order: 4
 chapter: web-animations
 slug: web-animations/reverse-cancel

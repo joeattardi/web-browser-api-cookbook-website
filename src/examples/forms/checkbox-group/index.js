@@ -8,7 +8,7 @@ function validateCheckboxes(form) {
   // message.
   const element = form.elements.option1;
 
-  if (data.getAll('options').length === 0) {
+  if (!data.has('options')) {
     element.setCustomValidity('Please select at least one option.');
   } else {
     element.setCustomValidity('');
@@ -19,9 +19,10 @@ function validateCheckboxes(form) {
  * Adds the necessary event listeners to an element to participate in form validation.
  * It handles setting and clearing error messages depending on the validation state.
  * @param element The input element to validate
+ * @param errorId The ID of a placeholder element that will show the error message
  */
-function addValidation(element) {
-  const errorElement = document.getElementById('checkbox-error');
+function addValidation(element, errorId) {
+  const errorElement = document.getElementById(errorId);
 
   /**
    * Fired when the form is validated and the field is not valid.
@@ -43,9 +44,9 @@ function addValidation(element) {
   });
 }
 
-addValidation(form.elements.option1);
-addValidation(form.elements.option2);
-addValidation(form.elements.option3);
+addValidation(form.elements.option1, 'checkbox-error');
+addValidation(form.elements.option2, 'checkbox-error');
+addValidation(form.elements.option3, 'checkbox-error');
 
 form.addEventListener('submit', event => {
   event.preventDefault();

@@ -36,7 +36,6 @@ class FeedbackRating extends HTMLElement {
 
         this.helpful = event.target.dataset.helpful === 'true';
         this.shadowRoot.dispatchEvent(new CustomEvent('feedback', {
-          detail: this.helpful,
           composed: true,
           bubbles: true
         }));
@@ -50,7 +49,8 @@ customElements.define('feedback-rating', FeedbackRating);
 const feedback = document.querySelector('feedback-rating');
 feedback.addEventListener('feedback', event => {
   const result = document.querySelector('#result');
-  if (event.detail) {
+
+  if (event.target.helpful ) {
     result.textContent = 'User indicated that the website was helpful.';
   } else {
     result.textContent = 'User indicated that the website was not helpful.';

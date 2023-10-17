@@ -10,35 +10,45 @@ dateInput.addEventListener('change', () => {
 })
 
 class DateFormatter extends HTMLElement {
+  // The browser will only notify the component about changes, via the
+  // attributeChangedCallback, for attributes that are listed here.
   static observedAttributes = ['date'];
 
   constructor() {
     super();
+
+    // Create the format here so you don't have to
+    // re-create it every time the date changes.
     this.format = new Intl.DateTimeFormat(
       navigator.language, 
-      { 
-        dateStyle: 'full'
-      }
+      { dateStyle: 'full' }
     );
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (newValue) {
-      this.textContent = this.format.format(new Date(newValue));
+  /**
+   * Formats the date represented by the current value of the `date`
+   * attribute, if any.
+   */
+  formatDate() {
+    if (this.hasAttribute('date')) {
+      this.textContent = this.format.format(
+        new Date(this.getAttribute('date'))
+      );
     } else {
+      // Handle the case where there is no date specified
       this.textContent = '(no date)';
     }
   }
 
+  attributeChangedCallback(name, oldValue, newValue) {
+    // Only watching one attribute, so this must be a change
+    // to the date attribute. Update the formatted date, if any.
+    this.formatDate();
+  }
+
   connectedCallback() {
-    if (this.hasAttribute('date')) {
-      const date = new Date(this.getAttribute('date'));
-      if (date) {
-        this.textContent = this.format.format(date);
-      }
-    } else {
-      this.textContent = '(no date)';
-    }
+    // The element was just added. Show the initial formatted date, if any.
+    this.formatDate();
   }
 }
 

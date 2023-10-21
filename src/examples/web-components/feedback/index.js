@@ -13,38 +13,45 @@ template.innerHTML = `
   </style>
 
   <div class="feedback-prompt">
-    <slot name="prompt">Was this helpful?</slot>
+    <p>Was this helpful?</p>
     <button data-helpful="true">Yes</button>
     <button data-helpful="false">No</button>
   </div>
 `;
 
 class FeedbackRating extends HTMLElement {
-  constructor() {
-    super();
-
+  connectedCallback() {
+    // Create the shadow DOM and render the template into it
     const shadowRoot = this.attachShadow({ mode: 'open' });
     shadowRoot.appendChild(template.content.cloneNode(true));
-  }
 
-  connectedCallback() {
-    const feedbackButtons = this.shadowRoot.querySelectorAll('button');
-    feedbackButtons.forEach(button => {
-      button.addEventListener('click', event => {
-        this.shadowRoot.querySelector('.feedback-prompt').remove();
-        this.shadowRoot.textContent = 'Thanks for your feedback!';
+    shadowRoot.querySelector('.feedback-prompt').addEventListener('click', event => {
+      const { helpful } = event.target.dataset;
+      // console.log(event.target.dataset.helpful);
 
-        this.helpful = event.target.dataset.helpful === 'true';
-        this.shadowRoot.dispatchEvent(new CustomEvent('feedback', {
-          composed: true,
-          bubbles: true
+      if (typeof helpful !== 'undefined') {
+        // Once a feedback option is chosen, hide the buttons and show a confirmation
+        shadowRoot.querySelector('.feedback-prompt').remove();
+        shadowRoot.textContent = 'Thanks for your feedback!';
+
+        // JavaScript doesn't have a 'parseBoolean' type function, so convert the string value
+        // to the corresponding boolean value.
+        this.helpful = helpful === 'true';
+
+        // Dispatch a custom event, so your app can be notified when a feedback button
+        // is clicked.
+        shadowRoot.dispatchEvent(new CustomEvent('feedback', {
+          composed: true, // this is needed to "escape" the shadow DOM boundary
+          bubbles: true // this is needed to propagate up the DOM
         }));
-      });
+      }
     });
   }
 }
 
-customElements.define('feedback-rating', FeedbackRating);
+if (!customElements.get('feedback-rating')) {
+  customElements.define('feedback-rating', FeedbackRating);
+}
 
 const feedback = document.querySelector('feedback-rating');
 feedback.addEventListener('feedback', event => {

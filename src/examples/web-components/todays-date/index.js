@@ -9,4 +9,6 @@ class TodaysDate extends HTMLElement {
   }
 }
 
-customElements.define('todays-date', TodaysDate);
+if (!customElements.get('todays-date')) {
+  customElements.define('todays-date', TodaysDate);
+}

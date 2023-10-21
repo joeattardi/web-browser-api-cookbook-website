@@ -52,4 +52,6 @@ class DateFormatter extends HTMLElement {
   }
 }
 
-customElements.define('date-formatter', DateFormatter);
+if (!customElements.get('date-formatter')) {
+  customElements.define('date-formatter', DateFormatter);
+}

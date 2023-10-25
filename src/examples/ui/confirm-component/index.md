@@ -6,6 +6,12 @@ slug: ui/confirm-component
 summary: Encapsulate the dialog logic in a custom element.
 ---
 
+<script>
+  import CompatibilityWarning from '$lib/components/CompatibilityWarning.svelte';
+</script>
+
+<CompatibilityWarning name="Dialog" href="https://caniuse.com/dialog" />
+
 This example creates a confirmation dialog wrapped in a web component (custom element).
 It makes the flow of showing the modal and waiting for the result a little easier by using a
 `Promise`.

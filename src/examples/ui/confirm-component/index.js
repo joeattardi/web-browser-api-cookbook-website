@@ -25,6 +25,10 @@ class ConfirmDialog extends HTMLElement {
       .addEventListener('click', () => {
         this.dialog.close('cancel');
       });
+
+    this.dialog.addEventListener('cancel', () => {
+      this.dialog.returnValue = 'cancel';
+    });
   }
 
   showModal() {
@@ -42,7 +46,7 @@ if (!customElements.get('confirm-dialog')) {
   customElements.define('confirm-dialog', ConfirmDialog);
 }
 
-const confirmDialog = document.querySelector('confirm-dialog');
+const confirmDialog = document.querySelector('#confirm');
 document.querySelector('#show-confirm')
   .addEventListener('click', async () => {
     const confirmed = await confirmDialog.showModal();

@@ -16,6 +16,10 @@ cancelButton.addEventListener('click', () => {
   dialog.close('cancel');
 });
 
+dialog.addEventListener('cancel', () => {
+  dialog.returnValue = 'cancel';
+});
+
 dialog.addEventListener('close', event => {
   console.log(dialog.returnValue);
   if (dialog.returnValue === 'confirm') {

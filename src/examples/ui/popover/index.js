@@ -1,1 +1,1 @@
-/* Popover */
+/* No JavaScript needed! */

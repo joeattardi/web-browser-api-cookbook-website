@@ -1,4 +1,5 @@
 const target = document.querySelector('.drop-target');
+const fileInput = document.querySelector('#file-input');
 
 function showDroppedFile(file) {
   // Read the file data and insert the loaded image
@@ -32,4 +33,11 @@ target.addEventListener('drop', event => {
 // file from replacing the full page content
 target.addEventListener('dragover', event => {
   event.preventDefault();
+});
+
+// For accessibility, perform the same operation when using
+// the file input.
+fileInput.addEventListener('change', () => {
+  const [file] = fileInput.files;
+  showDroppedFile(file);
 });

@@ -1,6 +1,6 @@
 ---
 title: Counting Characters, Words, and Sentences
-order: 6
+order: 8
 chapter: i18n
 slug: i18n/word-count
 summary: Split up a string into locale-specific segments to count words and sentences.

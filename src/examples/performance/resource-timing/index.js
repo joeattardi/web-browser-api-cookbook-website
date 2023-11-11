@@ -1,6 +1,9 @@
 const table = document.querySelector('#resource-table');
 
 const entries = window.performance.getEntriesByType('resource');
+console.log(entries);
+
+
 entries.forEach(entry => {
   const row = document.createElement('tr');
 

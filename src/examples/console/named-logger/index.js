@@ -1,7 +1,5 @@
 function createLogger(name, color) {
-  return (...args) => {
-    console.log(`%c${name}`, `color: ${color};`, ...args);
-  };
+  return console.log.bind(console, `%c${name}`, `color: ${color};`);
 }
 
 const rendererLogger = createLogger('renderer', 'blue');

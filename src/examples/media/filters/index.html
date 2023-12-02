@@ -1,0 +1,35 @@
+<style>
+  #canvas {
+    width: 640px;
+    height: 480px;
+  }
+</style>
+
+<div class="d-flex flex-column align-items-center">
+  <canvas id="canvas"></canvas>
+  <video id="preview" class="d-none"></video>
+</div>
+
+<fieldset>
+  <legend>Filter</legend>
+  <div class="d-flex">
+    <div class="form-check m-2">
+      <input class="form-check-input" type="radio" name="filter" id="filterNone" checked>
+      <label class="form-check-label" for="filterNone">
+        No filter
+      </label>
+    </div>
+    <div class="form-check m-2">
+      <input class="form-check-input" type="radio" name="filter" id="filterGrayscale">
+      <label class="form-check-label" for="filterGrayscale">
+        Grayscale
+      </label>
+    </div>
+    <div class="form-check m-2">
+      <input class="form-check-input" type="radio" name="filter" id="filterHueRotate">
+      <label class="form-check-label" for="filterHueRotate">
+        Hue rotate
+      </label>
+    </div>
+  </div>
+</fieldset>

@@ -1,7 +1,7 @@
 ---
-title: Capturing From the User's Camera
+title: Capturing an Image From the User's Camera
 order: 2
 chapter: media
 slug: media/webcam
-summary: Capture video or an image from the user's camera.
+summary: Take a photo using the user's camera.
 ---

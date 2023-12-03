@@ -1,6 +1,6 @@
 ---
 title: Determining the System Media Capabilities
-order: 3
+order: 4
 chapter: media
 slug: media/capabilities
 summary: Use the Media Capabilities API to determine if a given codec is supported on the current browser.

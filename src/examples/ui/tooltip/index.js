@@ -1,7 +1,7 @@
 const button = document.querySelector('#trigger');
 const tooltip = document.querySelector('#tooltip');
 
-button.addEventListener('mouseover', () => {
+function showTooltip() {
   // Find the position of the trigger element
   const triggerRect = trigger.getBoundingClientRect();
 
@@ -11,8 +11,23 @@ button.addEventListener('mouseover', () => {
   tooltip.style.left = `${triggerRect.left}px`;
 
   tooltip.showPopover();
+}
+
+// Show and hide the tooltip in response to mouse events.
+button.addEventListener('mouseover', () => {
+  showTooltip();
 });
 
 button.addEventListener('mouseout', () => {
+  tooltip.hidePopover();
+});
+
+// For keyboard accessibility, also show and hide the tooltip
+// in response to focus events.
+button.addEventListener('focus', () => {
+  showTooltip();
+});
+
+button.addEventListener('blur', () => {
   tooltip.hidePopover();
 });

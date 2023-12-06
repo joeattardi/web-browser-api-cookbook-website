@@ -4,8 +4,8 @@ template.innerHTML = `
     <h2>Confirm</h2>
     <p><slot></slot></p>
 
-    <button class="btn btn-primary confirm-button">Confirm</button>
-    <button class="btn btn-secondary cancel-button">Cancel</button>
+    <button type="button" class="btn btn-primary confirm-button">Confirm</button>
+    <button type="button" class="btn btn-secondary cancel-button">Cancel</button>
   </dialog>
 `;
 

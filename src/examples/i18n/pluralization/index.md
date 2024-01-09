@@ -1,6 +1,6 @@
 ---
 title: Applying Pluralization Rules
-order: 7
+order: 8
 chapter: i18n
 slug: i18n/pluralization
 summary: Format a message differently depending on the number of items.

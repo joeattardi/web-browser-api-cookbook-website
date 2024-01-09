@@ -22,6 +22,7 @@ target.addEventListener('drop', event => {
 
   // Get the selected file data.
   const [item] = event.dataTransfer.items;
+  console.log(item);
   const file = item.getAsFile();
 
   if (file.type.startsWith('image/')) {

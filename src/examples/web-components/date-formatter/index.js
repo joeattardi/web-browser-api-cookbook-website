@@ -35,12 +35,12 @@ class DateFormatter extends HTMLElement {
         new Date(this.getAttribute('date'))
       );
     } else {
-      // Handle the case where there is no date specified
-      this.textContent = '(no date)';
+      // If no date specified, show nothing
+      this.textContent = '';
     }
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
+  attributeChangedCallback() {
     // Only watching one attribute, so this must be a change
     // to the date attribute. Update the formatted date, if any.
     this.formatDate();

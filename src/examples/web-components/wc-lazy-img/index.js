@@ -1,9 +1,17 @@
-class LazyImage extends HTMLImageElement {
+class LazyImage extends HTMLElement {
+  constructor() {
+    super();
+
+    const shadowRoot = this.attachShadow({ mode: 'open' });
+    this.image = document.createElement('img');
+    shadowRoot.appendChild(this.image);
+  }
+
   connectedCallback() {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
         console.log('Loading image');
-        this.src = this.getAttribute('lazySrc');
+        this.image.src = this.getAttribute('src');
         observer.disconnect();
       }
     });
@@ -13,7 +21,5 @@ class LazyImage extends HTMLImageElement {
 }
 
 if (!customElements.get('lazy-image')) {
-  customElements.define('lazy-image', LazyImage, {
-    extends: 'img'
-  });
+  customElements.define('lazy-image', LazyImage);
 }

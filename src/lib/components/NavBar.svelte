@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <a class="navbar-brand d-flex align-items-center" href="/">
         <img class="me-2" src="/logo.png" alt="Logo">
-        <strong>Web Browser API Cookbook</strong>
+        <strong>Web API Cookbook</strong>
       </a>
       <ul class="navbar-nav">
         <li class="nav-item">

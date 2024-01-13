@@ -6,7 +6,7 @@ if (!('share' in navigator)) {
 } else {
   shareButton.addEventListener('click', () => {
     navigator.share({
-      title: 'Web Browser API Cookbook',
+      title: 'Web API Cookbook',
       url: 'browserapis.dev'
     });
   });

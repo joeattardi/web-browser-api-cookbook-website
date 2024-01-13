@@ -5,8 +5,8 @@
 <h2>About the Book</h2>
 
 <p>
-  <em>Web Browser API Cookbook</em> is an upcoming book by Joe Attardi, due to be
-  published by O'Reilly Media in 2025. The book contains examples or "recipes" demonstrating
+  <em>Web API Cookbook</em> is an upcoming book by Joe Attardi, due to be
+  published by O'Reilly Media in 2024. The book contains examples or "recipes" demonstrating
   how to accomplish specific tasks using only the APIs built in to modern web browsers.
 </p>
 
@@ -28,11 +28,6 @@
   <li>Performance statistics</li>
   <li>The Web Animations API</li>
 </ul>
-
-<p>
-  If you'd like to receive occasional email updates about the book's progress,
-  you can <a href="/signup">sign up for the mailing list</a>.
-</p>
 
 <h2>About the Author</h2>
 <div class="d-flex">

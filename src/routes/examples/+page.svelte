@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>Examples by Chapter | Web Browser API Cookbook</title>
+  <title>Examples by Chapter | Web API Cookbook</title>
 </svelte:head>
 <h1>Examples by Chapter</h1>
 

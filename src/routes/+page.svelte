@@ -14,11 +14,7 @@
     <p>
       The book is due to be published by O'Reilly Media later in 2024, but is currently available in early release.
     </p>
-  </div>
-</div>
 
-<div class="d-flex flex-column mb-4">
-  <div class="text-center mb-4">
     <a class="btn btn-primary px-4 py-3 fs-4 w-100" href="examples">
       <div class="fw-bold">Explore the examples</div>
       <small class="fs-6"

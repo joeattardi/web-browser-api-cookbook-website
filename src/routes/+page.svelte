@@ -27,6 +27,7 @@
 <style>
   .cover {
     width: 30vw;
+    max-width: 500px;
     margin-right: 1.5rem;
   }
 

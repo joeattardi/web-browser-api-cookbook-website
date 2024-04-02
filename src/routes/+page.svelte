@@ -11,16 +11,18 @@
       plugins are now supported by the browser platform itself.
     </p>
 
-    <p>
-      The book is due to be published by O'Reilly Media later in 2024, but is currently available in early release.
-    </p>
-
-    <a class="btn btn-primary px-4 py-3 fs-4 w-100" href="examples">
-      <div class="fw-bold">Explore the examples</div>
-      <small class="fs-6"
-        >Working demos demonstrating modern browser APIs</small
-      >
-    </a>
+    <div class="d-flex flex-column gap-4">
+      <a class="btn btn-primary px-4 py-3 fs-4 w-100" href="https://www.amazon.com/Web-API-Cookbook-JavaScript-Applications/dp/1098150694">
+        <div class="fw-bold">Get the book (Amazon)</div>
+      </a>
+      <a class="btn btn-primary px-4 py-3 fs-4 w-100" href="https://www.oreilly.com/library/view/web-api-cookbook/9781098150686/">
+        <div class="fw-bold">Get the book (O'Reilly)</div>
+      </a>
+      <a class="btn btn-primary px-4 py-3 fs-4 w-100" href="examples">
+        <div class="fw-bold">Explore the examples</div>
+      </a>
+    </div>
+    
   </div>
 </div>
 

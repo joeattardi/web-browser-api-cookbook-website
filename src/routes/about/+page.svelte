@@ -5,7 +5,7 @@
 <h2>About the Book</h2>
 
 <p>
-  <em>Web API Cookbook</em> is an upcoming book by Joe Attardi, due to be
+  <em>Web API Cookbook</em> is a book by Joe Attardi, 
   published by O'Reilly Media in 2024. The book contains examples or "recipes" demonstrating
   how to accomplish specific tasks using only the APIs built in to modern web browsers.
 </p>
@@ -15,7 +15,7 @@
   plugins are now supported by the browser platform itself.
 </p>
 
-<p>The book will cover topics such as:</p>
+<p>The book covers topics such as:</p>
 
 <ul>
   <li>Working with persisted data and local files</li>
@@ -34,14 +34,14 @@
   <img id="headshot" src={joe} alt="Joe Attardi" />
   <div>
     <p>
-      Joe Attardi is a software developer and author with over 18 years of
+      Joe Attardi is a software developer and author with over 20 years of
       programming experience, specializing in frontend development and
       JavaScript. He has worked on a variety of large-scale projects for
       companies such as Synopsys, Salesforce, Constant Contact, and Dell.
     </p>
 
     <p>
-      He is the author of <a
+      He is also the author of <a
         href="https://link.springer.com/book/10.1007/978-1-4842-6294-8"
         ><em>Modern CSS (2020)</em></a
       >

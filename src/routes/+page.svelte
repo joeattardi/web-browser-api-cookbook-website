@@ -41,6 +41,23 @@
       </div>
     </div>
   </div>
+  <div class="p-4 testimonials">
+    <div class="testimonial-item">
+      <figure>
+        <blockquote class="blockquote">
+          <p>
+            <em>Web API Cookbook</em> covers a wide range of browser-based APIs and
+            provides valuable examples for all skill levels. Plus, Joe's writing
+            style and thoughtful explanations make the learning enjoyable. This is
+            a must-read for web developers!
+          </p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Sarah Shook, Software developer/owner, Shook LLC
+        </figcaption>
+      </figure>
+    </div>
+  </div>
   <div class="p-4 description">
     <p>
       JavaScript gives web developers great power to create rich interactive
@@ -197,6 +214,17 @@
     }
   }
 
+  .testimonials {
+    background: #cbd5e1;
+    color: black;
+    display: flex;
+    justify-content: center;
+  }
+
+  .testimonial-item {
+    max-width: 50%;
+  }
+
   .description {
     font-size: 1.2rem;
   }
@@ -335,12 +363,26 @@
     color: white;
   }
 
+  :global([data-bs-theme="dark"]) .secondary-link {
+    border-color: #3b82f6;
+    color: #3b82f6;
+  }
+
   :global([data-bs-theme="dark"]) .secondary-link:hover {
     background: #172554;
   }
 
   :global([data-bs-theme="dark"]) .secondary-cta:hover {
     background: #451a03;
+  }
+
+  :global([data-bs-theme="dark"]) .testimonials {
+    background: #334155;
+    color: white;
+  }
+
+  :global([data-bs-theme="dark"]) .blockquote-footer {
+    color: white;
   }
 
   @media (max-width: 992px) {

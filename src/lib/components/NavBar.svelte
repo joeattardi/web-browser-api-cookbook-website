@@ -29,7 +29,7 @@
           <a class="nav-link" href="/about">About</a>
         </li>
         <li>
-          <a class="nav-link" href="https://learning.oreilly.com/library/view/web-browser-api/9781098150686/">Get the Book</a>
+          <a class="nav-link" href="/buy">Get the Book</a>
         </li>
       </ul>
     </div>

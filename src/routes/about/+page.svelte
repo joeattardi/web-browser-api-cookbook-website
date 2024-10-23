@@ -1,5 +1,5 @@
 <script>
-  import joe from './joe.jpg';
+  import joe from './joe.png';
 </script>
 <div class="p-4">
   <h2>About the Book</h2>
@@ -60,5 +60,6 @@
   #headshot {
     height: 200px;
     margin-right: 1em;
+    border-radius: 50%;
   }
 </style>

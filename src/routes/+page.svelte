@@ -11,9 +11,9 @@
           Buy from Amazon
           <i class="bi bi-arrow-right"></i>
         </a>
-        <a class="cta secondary-cta" href="/examples">See code and demos</a>
+        <a class="cta secondary-cta" href="/examples">Explore the examples</a>
       </div>
-      <div>Also available from:</div>
+      <p class="lead">Also available from:</p>
       <div class="secondary-links">
         <a class="secondary-link" href="https://www.barnesandnoble.com/w/web-api-cookbook-joe-attardi/1144735729?ean=9781098150693">Barnes &amp; Noble</a>
         <a class="secondary-link" href="https://www.oreilly.com/library/view/web-api-cookbook/9781098150686/">O'Reilly Platform</a>
@@ -59,6 +59,7 @@
 
   .secondary-link {
     border: 1px solid #1d4ed8;
+    font-size: 1.2rem;
     color: #1d4ed8;
     padding: 8px 16px;
     text-decoration: none;
@@ -85,7 +86,7 @@
   }
 
   .cta {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     border-radius: 5px;
     padding: 8px 32px;

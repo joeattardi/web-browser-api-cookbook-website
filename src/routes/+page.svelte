@@ -57,6 +57,19 @@
         </figcaption>
       </figure>
     </div>
+    <div class="testimonial-item">
+      <figure>
+        <blockquote class="blockquote">
+          <p>
+            This book offered fresh insights and introduced me to APIs I never
+            knew existed.
+          </p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Bret Little, Staff Software Engineer, Shopify
+        </figcaption>
+      </figure>
+    </div>
   </div>
   <div class="p-4 description">
     <p>
@@ -265,12 +278,12 @@
   .testimonials {
     background: #cbd5e1;
     color: black;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
     justify-content: center;
-  }
-
-  .testimonial-item {
-    max-width: 50%;
+    column-gap: 4rem;
+    row-gap: 2rem;
   }
 
   .description {
@@ -400,10 +413,12 @@
     font-size: 3rem;
     font-weight: bold;
     margin: 0;
+    text-align: center;
   }
 
   .subtitle {
     font-size: 1.5rem;
+    text-align: center;
   }
 
   :global([data-bs-theme="dark"]) .hero {
@@ -441,6 +456,18 @@
 
     .ctas {
       flex-direction: column;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .testimonials {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .tagline {
+      font-size: 3rem;
     }
   }
 </style>

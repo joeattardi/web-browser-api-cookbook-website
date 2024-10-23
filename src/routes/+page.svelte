@@ -7,7 +7,10 @@
       <div class="author">by Joe Attardi</div>
       <div class="tagline">Unlock the power of modern web browser APIs.</div>
       <div class="ctas">
-        <a class="cta primary-cta" href="https://www.amazon.com/Web-API-Cookbook-JavaScript-Applications/dp/1098150694">
+        <a
+          class="cta primary-cta"
+          href="https://www.amazon.com/Web-API-Cookbook-JavaScript-Applications/dp/1098150694"
+        >
           Buy from Amazon
           <i class="bi bi-arrow-right"></i>
         </a>
@@ -15,12 +18,157 @@
       </div>
       <p class="lead">Also available from:</p>
       <div class="secondary-links">
-        <a class="secondary-link" href="https://www.barnesandnoble.com/w/web-api-cookbook-joe-attardi/1144735729?ean=9781098150693">Barnes &amp; Noble</a>
-        <a class="secondary-link" href="https://www.oreilly.com/library/view/web-api-cookbook/9781098150686/">O'Reilly Platform</a>
-        <a class="secondary-link" href="https://books.apple.com/us/book/web-api-cookbook/id6479818683">Apple Books</a>
-        <a class="secondary-link" href="https://play.google.com/store/books/details/Joe_Attardi_Web_API_Cookbook?id=ZaT8EAAAQBAJ">Google Play Books</a>
+        <a
+          class="secondary-link"
+          href="https://www.barnesandnoble.com/w/web-api-cookbook-joe-attardi/1144735729?ean=9781098150693"
+          >Barnes &amp; Noble</a
+        >
+        <a
+          class="secondary-link"
+          href="https://www.oreilly.com/library/view/web-api-cookbook/9781098150686/"
+          >O'Reilly Platform</a
+        >
+        <a
+          class="secondary-link"
+          href="https://books.apple.com/us/book/web-api-cookbook/id6479818683"
+          >Apple Books</a
+        >
+        <a
+          class="secondary-link"
+          href="https://play.google.com/store/books/details/Joe_Attardi_Web_API_Cookbook?id=ZaT8EAAAQBAJ"
+          >Google Play Books</a
+        >
       </div>
     </div>
+  </div>
+  <div class="p-4 description">
+    <p>
+      JavaScript gives web developers great power to create rich interactive
+      browser experiences, and much of that power is provided by the browser
+      itself. Modern web APIs enable web-based applications to come to life like
+      never before, supporting actions that once required browser plug-ins. Some
+      are still in an experimental stage, but many are ready for use today.
+    </p>
+
+    <p>
+      This hands-on cookbook explores the powerful APIs available in modern
+      browsers and guides you through the specific tasks that they unlock.
+      Because these features are web standards, there is comprehensive
+      documentation available from trusted resources such as MDN Web Docs. The
+      knowledge you'll gain is transferable across different companies and
+      projects.
+    </p>
+
+    <p>With this book, you'll:</p>
+
+    <ul>
+      <li>
+        Learn the breadth of functionality available in modern browser APIs
+      </li>
+      <li>Explore future APIs that are still in an experimental stage</li>
+      <li>
+        Discover newer elements, such as dialog that replaces the need for a
+        third-party library
+      </li>
+      <li>
+        Build more powerful and interactive web applications using native APIs
+      </li>
+      <li>
+        Understand the permissions model used by the browser to unlock
+        functionality such as geolocation and push notifications
+      </li>
+    </ul>
+
+    <h2>Contents</h2>
+    <ol>
+      <li>
+        <div><strong>Asynchronous APIs</strong></div>
+        <small
+          >Explore fundamental asynchronous JavaScript concepts, including
+          callback functions and Promises.
+        </small>
+      </li>
+      <li>
+        <div><strong>Simple Persistence with the Web Storage API </strong></div>
+        <small>Store and retrieve data using persistent storage. </small>
+      </li>
+      <li>
+        <div>
+          <strong>URLs and Routing</strong>
+        </div>
+        <small>Work with the URL and History APIs. </small>
+      </li>
+      <li>
+        <div>
+          <strong>Network Requests </strong>
+        </div>
+        <small>Communicate with remote servers and APIs. </small>
+      </li>
+      <li>
+        <div>
+          <strong>IndexedDB </strong>
+        </div>
+        <small
+          >A more sophisticated data store which can store collections of
+          objects.
+        </small>
+      </li>
+      <li>
+        <div><strong>Observing the DOM </strong></div>
+        <small>Listen for changes to DOM elements and their structure. </small>
+      </li>
+      <li>
+        <div><strong>Forms</strong></div>
+        <small
+          >Enhance your forms with the FormData and Constraint Validation APIs.
+        </small>
+      </li>
+      <li>
+        <div><strong>The Web Animations API </strong></div>
+        <small>Apply keyframe animations to elements programmatically. </small>
+      </li>
+      <li>
+        <div><strong>The Web Speech API </strong></div>
+        <small>Add voice synthesis and recognition to your apps. </small>
+      </li>
+      <li>
+        <div><strong>Working With Files </strong></div>
+        <small>Read and write file data. </small>
+      </li>
+      <li>
+        <div><strong>Internationalization</strong></div>
+        <small
+          >Explore the internationalization APIs built in to the browser.
+        </small>
+      </li>
+      <li>
+        <div><strong>Web Components </strong></div>
+        <small>Create custom HTML elements. </small>
+      </li>
+      <li>
+        <div><strong>UI Elements </strong></div>
+        <small>Use dialogs and other interactive elements. </small>
+      </li>
+      <li>
+        <div><strong>Device Integration </strong></div>
+        <small>Interact with sensors and services on your device. </small>
+      </li>
+      <li>
+        <div><strong>Measuring Performance </strong></div>
+        <small>Capture performance metrics. </small>
+      </li>
+      <li>
+        <div><strong>Working With the Console </strong></div>
+        <small
+          >Learn about different ways to present information using the Console
+          API.
+        </small>
+      </li>
+      <li>
+        <div><strong>CSS</strong></div>
+        <small>Explore CSS related APIs. </small>
+      </li>
+    </ol>
   </div>
 </div>
 
@@ -49,6 +197,10 @@
     }
   }
 
+  .description {
+    font-size: 1.2rem;
+  }
+
   .secondary-links {
     display: flex;
     align-items: center;
@@ -64,12 +216,16 @@
     padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
-    transition: transform 250ms, background-color 250ms;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    transition:
+      transform 250ms,
+      background-color 250ms;
+    box-shadow:
+      0 1px 3px 0 rgb(0 0 0 / 0.1),
+      0 1px 2px -1px rgb(0 0 0 / 0.1);
   }
 
   .secondary-link:hover {
-    background: #dbeafe
+    background: #dbeafe;
   }
 
   .secondary-link:active {
@@ -94,8 +250,12 @@
     align-items: center;
     gap: 8px;
     font-weight: bold;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    transition: transform 250ms, background-color 250ms;
+    box-shadow:
+      0 1px 3px 0 rgb(0 0 0 / 0.1),
+      0 1px 2px -1px rgb(0 0 0 / 0.1);
+    transition:
+      transform 250ms,
+      background-color 250ms;
   }
 
   .cta:active {
@@ -143,11 +303,14 @@
 
   .cover {
     width: 33%;
+    max-width: 480px;
     height: auto;
     animation: appear-scale 250ms;
     animation-delay: 250ms;
     animation-fill-mode: both;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    box-shadow:
+      0 1px 3px 0 rgb(0 0 0 / 0.1),
+      0 1px 2px -1px rgb(0 0 0 / 0.1);
   }
 
   .tagline {
@@ -170,6 +333,14 @@
   :global([data-bs-theme="dark"]) .hero {
     background: #0f172a;
     color: white;
+  }
+
+  :global([data-bs-theme="dark"]) .secondary-link:hover {
+    background: #172554;
+  }
+
+  :global([data-bs-theme="dark"]) .secondary-cta:hover {
+    background: #451a03;
   }
 
   @media (max-width: 992px) {

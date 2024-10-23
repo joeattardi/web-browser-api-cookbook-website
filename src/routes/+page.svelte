@@ -53,11 +53,13 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
   }
 
   .secondary-link {
     border: 1px solid #1d4ed8;
+    color: #1d4ed8;
     padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
@@ -123,10 +125,8 @@
     background: #f1f5f9;
     padding: 32px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
-    border-radius: 10px;
-    border: 1px solid #e2e8f0
   }
 
   .hero .content {
@@ -146,6 +146,7 @@
     animation: appear-scale 250ms;
     animation-delay: 250ms;
     animation-fill-mode: both;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   }
 
   .tagline {
@@ -165,6 +166,19 @@
     font-size: 1.5rem;
   }
 
-  @media (max-width: 768px) {
+  :global([data-bs-theme="dark"]) .hero {
+    background: #0f172a;
+    color: white;
+  }
+
+  @media (max-width: 992px) {
+    .hero {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ctas {
+      flex-direction: column;
+    }
   }
 </style>

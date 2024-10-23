@@ -27,7 +27,7 @@
 </svelte:head>
 <div class="layout d-flex flex-column">
   <Header />
-  <main class="p-4 container flex-grow-1"><slot></slot></main>
+  <main class="container-fluid p-0 flex-grow-1"><slot></slot></main>
   <Footer />
 </div>
 

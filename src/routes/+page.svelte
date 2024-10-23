@@ -99,31 +99,43 @@
     <h2>Contents</h2>
     <ol>
       <li>
-        <div><strong>Asynchronous APIs</strong></div>
+        <div>
+          <strong><a href="/examples/async">Asynchronous APIs</a></strong>
+        </div>
         <small
           >Explore fundamental asynchronous JavaScript concepts, including
           callback functions and Promises.
         </small>
       </li>
       <li>
-        <div><strong>Simple Persistence with the Web Storage API </strong></div>
+        <div>
+          <strong
+            ><a href="/examples/web-storage"
+              >Simple Persistence with the Web Storage API
+            </a></strong
+          >
+        </div>
         <small>Store and retrieve data using persistent storage. </small>
       </li>
       <li>
         <div>
-          <strong>URLs and Routing</strong>
+          <strong
+            ><a href="/examples/urls-and-routing">URLs and Routing</a></strong
+          >
         </div>
         <small>Work with the URL and History APIs. </small>
       </li>
       <li>
         <div>
-          <strong>Network Requests </strong>
+          <strong
+            ><a href="/examples/network-requests">Network Requests</a>
+          </strong>
         </div>
         <small>Communicate with remote servers and APIs. </small>
       </li>
       <li>
         <div>
-          <strong>IndexedDB </strong>
+          <strong><a href="/examples/indexeddb">IndexedDB </a></strong>
         </div>
         <small
           >A more sophisticated data store which can store collections of
@@ -131,59 +143,95 @@
         </small>
       </li>
       <li>
-        <div><strong>Observing the DOM </strong></div>
+        <div>
+          <strong><a href="/examples/observers">Observing the DOM</a> </strong>
+        </div>
         <small>Listen for changes to DOM elements and their structure. </small>
       </li>
       <li>
-        <div><strong>Forms</strong></div>
+        <div><strong><a href="/examples/forms">Forms</a></strong></div>
         <small
           >Enhance your forms with the FormData and Constraint Validation APIs.
         </small>
       </li>
       <li>
-        <div><strong>The Web Animations API </strong></div>
+        <div>
+          <strong
+            ><a href="/examples/web-animations">The Web Animations API</a>
+          </strong>
+        </div>
         <small>Apply keyframe animations to elements programmatically. </small>
       </li>
       <li>
-        <div><strong>The Web Speech API </strong></div>
+        <div>
+          <strong
+            ><a href="/examples/web-speech">The Web Speech API</a>
+          </strong>
+        </div>
         <small>Add voice synthesis and recognition to your apps. </small>
       </li>
       <li>
-        <div><strong>Working With Files </strong></div>
+        <div>
+          <strong><a href="/examples/files">Working With Files</a> </strong>
+        </div>
         <small>Read and write file data. </small>
       </li>
       <li>
-        <div><strong>Internationalization</strong></div>
+        <div>
+          <strong><a href="/examples/i18n">Internationalization</a></strong>
+        </div>
         <small
           >Explore the internationalization APIs built in to the browser.
         </small>
       </li>
       <li>
-        <div><strong>Web Components </strong></div>
+        <div>
+          <strong
+            ><a href="/examples/web-components">Web Components</a>
+          </strong>
+        </div>
         <small>Create custom HTML elements. </small>
       </li>
       <li>
-        <div><strong>UI Elements </strong></div>
+        <div><strong><a href="/examples/ui">UI Elements</a> </strong></div>
         <small>Use dialogs and other interactive elements. </small>
       </li>
       <li>
-        <div><strong>Device Integration </strong></div>
+        <div>
+          <strong><a href="/examples/device">Device Integration </a></strong>
+        </div>
         <small>Interact with sensors and services on your device. </small>
       </li>
       <li>
-        <div><strong>Measuring Performance </strong></div>
+        <div>
+          <strong
+            ><a href="/examples/performance">Measuring Performance</a>
+          </strong>
+        </div>
         <small>Capture performance metrics. </small>
       </li>
       <li>
-        <div><strong>Working With the Console </strong></div>
+        <div>
+          <strong
+            ><a href="/examples/console">Working With the Console</a>
+          </strong>
+        </div>
         <small
           >Learn about different ways to present information using the Console
           API.
         </small>
       </li>
       <li>
-        <div><strong>CSS</strong></div>
+        <div><strong><a href="/examples/css">CSS</a></strong></div>
         <small>Explore CSS related APIs. </small>
+      </li>
+      <li>
+        <div>
+          <strong
+            ><a href="http://localhost:5173/examples/media">Media</a></strong
+          >
+        </div>
+        <small>Work with images and video.</small>
       </li>
     </ol>
   </div>

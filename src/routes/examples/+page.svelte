@@ -6,6 +6,8 @@
 
 <svelte:head>
   <title>Examples by Chapter | Web API Cookbook</title>
+  <meta property="og:title" content="Examples by Chapter | Web API Cookbook" />
+  <meta aproperty="twitter:title" content="Examples by Chapter | Web API Cookbook" />
 </svelte:head>
 <div class="p-4">
   <h1>Examples by Chapter</h1>

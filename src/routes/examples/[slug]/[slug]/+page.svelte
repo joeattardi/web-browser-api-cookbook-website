@@ -26,6 +26,8 @@
 <svelte:head>
   {@html highlightTheme}
   <title>{data.metadata.title} | Web API Cookbook</title>
+  <meta property="og:title" content={`${data.metadata.title} | Web API Cookbook`} />
+  <meta aproperty="twitter:title" content={`${data.metadata.title} | Web API Cookbook`} />
 </svelte:head>
 
 <div class="p-4">
